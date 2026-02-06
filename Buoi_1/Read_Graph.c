@@ -26,6 +26,7 @@ typedef struct{
 
 void init(Graph *G, int n){
 	G->n = n;
+	G->m = 0;
 	
 	int i,j;
 	for(i=1; i<=G->n; i++)
