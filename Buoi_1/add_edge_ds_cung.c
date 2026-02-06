@@ -21,8 +21,13 @@ Viết hàm add_edge(Graph* G, int x, int y) để thêm cung (x, y) vào đồ 
 
 void add_edge(Graph* G, int x, int y) {
 }
+
+Chú ý:
+
+- Nếu cung (x, y) không hợp lệ (vd: x < 1, y > n, ...) thì bỏ qua không làm gì cả.
 */
 void add_edge(Graph *G, int x, int y){
+	if(x < 1 || x > G->n || y < 1 || y > G->n) return;
     G->edges[G->m].x = x;
     G->edges[G->m].y = y;
     G->m++;
